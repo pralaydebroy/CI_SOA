@@ -26,7 +26,7 @@
  <oracleHome>D:/Oracle12c/middleware12c/product/soa12212</oracleHome>
 <oracleServerUrl>http://localhost:7001</oracleServerUrl>
 <oracleUsername>weblogic</oracleUsername>
-<oraclePassword>weblogic1</oraclePassword>
+<oraclePassword>welcome1</oraclePassword>
 </configuration>
 </plugin>
 </plugins>
