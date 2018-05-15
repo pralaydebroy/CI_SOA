@@ -28,6 +28,7 @@
    </list>
    <list n="listOfChildren">
       <hash><url n="URL" path="CI_Test1/CI_Test1.jpr"/></hash>
+      <hash><url n="URL" path="CI_Test2/CI_Test2.jpr"/></hash>
       <hash><url n="URL" path="System/System.jpr"/></hash>
    </list>
    <hash n="oracle.jdeveloper.maven.compiler.MavenConfiguration">

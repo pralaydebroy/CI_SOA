@@ -75,7 +75,7 @@
       <string v="oracle.tip.tools.ide.ess.addin.ESSContentSetProvider/ess-content"/>
       <string v="oracle.jdeveloper.model.PathsConfiguration/cepContentSet"/>
    </list>
-   <value n="defaultPackage" v="ci_test1"/>
+   <value n="defaultPackage" v="ci_test2"/>
    <hash n="oracle.adfdtinternal.model.ide.settings.ADFMSettings">
       <hash n="adfmContentSet">
          <list n="pattern-filters"/>
@@ -108,10 +108,23 @@
    <hash n="oracle.jdeveloper.compiler.OjcConfiguration">
       <value n="webIANAEncoding" v="windows-1252"/>
    </hash>
+   <hash n="oracle.jdeveloper.deploy.dt.DeploymentProfiles">
+      <hash n="profileDefinitions">
+         <hash n="CI_Test2">
+            <value n="profileClass" v="SbProjectDeployProfile"/>
+            <value n="profileName" v="CI_Test2"/>
+         </hash>
+      </hash>
+      <list n="profileList">
+         <string v="CI_Test2"/>
+      </list>
+   </hash>
    <hash n="oracle.jdeveloper.maven.compiler.MavenConfiguration">
       <url n="pomfileURL" path="pom.xml"/>
    </hash>
    <hash n="oracle.jdeveloper.model.J2eeSettings">
+      <value n="j2eeWebAppName" v="CI-servicebus-application-CI_Test2-webapp"/>
+      <value n="j2eeWebContextRoot" v="CI-servicebus-application-CI_Test2-context-root"/>
       <hash n="webContentSet">
          <list n="pattern-filters"/>
          <list n="url-path">
