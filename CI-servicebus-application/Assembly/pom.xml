@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>nl.whitehorses</groupId>
+	<artifactId>Assembly</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<dependencies>
+		<dependency>
+			<groupId>org.airtel.com</groupId>
+			<artifactId>CI_Test1</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<type>sbar</type>
+		</dependency>
+		<dependency>
+			<groupId>org.airtel.com</groupId>
+			<artifactId>CI_Test2</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<type>sbar</type>
+		</dependency>
+		<dependency>
+			<groupId>org.airtel.com</groupId>
+			<artifactId>System</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<type>sbar</type>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>sbconfig_${project.version}</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.6</version>
+				<executions>
+					<execution>
+						<id>default-jar</id>
+						<phase>never</phase>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<appendAssemblyId>false</appendAssemblyId>
+					<descriptors>
+						<descriptor>${basedir}/src/main/assembly/assembly.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>nl.whitehorses.servicebus</groupId>
+						<artifactId>servicebus-plugin</artifactId>
+						<version>1.1</version>
+					</dependency>
+				</dependencies>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			 <plugin>
+                <groupId>nl.whitehorses.servicebus</groupId> 
+                <artifactId>servicebus-plugin</artifactId> 
+                <version>1.1</version> 
+                <executions>
+                    <execution>
+                        <id>deploy-assembly</id>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                            <goal>deploy-assembly</goal>
+                        </goals>
+                    </execution>
+                </executions>
+				
+				<configuration> 
+                    <!-- Configure the Oracle Home directory -->
+                    
+                     <serverUrl>http://localhost:7001</serverUrl>
+                    <serverUsername>weblogic</serverUsername>
+                    <serverPassword>welcome1</serverPassword>
+                    
+               
+                </configuration> 
+            </plugin>
+		</plugins>
+	</build>
+</project>
