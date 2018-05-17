@@ -48,11 +48,14 @@
                 <configuration> 
                     <!-- Configure the Oracle Home directory -->
                     <oracleHome>D:/Oracle12c/middleware12c/product/soa12212</oracleHome> 
+                     <oracleServerUrl>http://localhost:7001</oracleServerUrl>
+                    <oracleUsername>weblogic</oracleUsername>
+                    <oraclePassword>welcome1</oraclePassword>
                     <!-- Specify whether this is a system release -->
                     <system>false</system> 
                     <!-- Configure the export level of the release, possible values are PROJECT and RESOURCE -->
                     <exportLevel>RESOURCE</exportLevel> 
-                  
+                 
                    <!-- Optional parameter to specify which of the resources should be included into and excluded from the archive -->
                     <resources>D:\workspace\CI\CI_SOA\CI-servicebus-application\archiveResources.xml</resources> 
                
