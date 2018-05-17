@@ -21,6 +21,8 @@
         <module>CI_Test1</module>
         <module>System</module>
         <module>CI_Test2</module>
+         <!-- Assembly project -->
+        <module>Assembly</module> 
     </modules>
 
 </project>
