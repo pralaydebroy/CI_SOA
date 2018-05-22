@@ -84,7 +84,7 @@
                     <serverUsername>weblogic</serverUsername>
                     <serverPassword>welcome1</serverPassword>
                     
-               
+               <!--Test git commit-->
                 </configuration> 
             </plugin>
 		</plugins>
