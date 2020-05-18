@@ -41,7 +41,7 @@
         </resources> 
         <plugins> 
             <plugin> 
-                <groupId>nl.whitehorses.servicebus</groupId> 
+                <groupId>com.myown.servicebus</groupId> 
                 <artifactId>servicebus-plugin</artifactId> 
                 <version>1.1</version> 
                 <extensions>true</extensions> 
