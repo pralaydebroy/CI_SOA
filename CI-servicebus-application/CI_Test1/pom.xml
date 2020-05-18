@@ -10,7 +10,7 @@
         <relativePath/>
     </parent>
 -->
-    <groupId>org.airtel.com</groupId>
+    <groupId>org.demo.com</groupId>
     <artifactId>CI_Test1</artifactId>
     <version>1.0-SNAPSHOT</version>
 
